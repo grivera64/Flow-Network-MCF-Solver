@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04355d0b-1820-47d4-92a5-0afa0f791d7b" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KD0gwlmFKaVLYvk5oE0zvtJlO3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/river/IntelliJ-Workspace/Research/CAHSI REU Fall 2022/Flow-Network-MCF-Solver",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\river\IntelliJ-Workspace\Research\CAHSI REU Fall 2022\Flow-Network-MCF-Solver" />
+      <recent name="C:\Users\river\IntelliJ-Workspace\Research\CAHSI REU Fall 2022\Flow-Network-MCF-Solver\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\river\IntelliJ-Workspace\Research\CAHSI REU Fall 2022\Flow-Network-MCF-Solver" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="FlowNetwork" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FlowNetwork" />
+      <module name="Flow-Network-MCF-Solver-Prototype" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlowNetworkSolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FlowNetworkSolver" />
+      <module name="Flow-Network-MCF-Solver-Prototype" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Flow-Network-MCF-Solver" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.FlowNetworkSolver" />
+        <item itemvalue="Application.FlowNetwork" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04355d0b-1820-47d4-92a5-0afa0f791d7b" name="Changes" comment="" />
+      <created>1673493962424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673493962424</updated>
+      <workItem from="1673493963475" duration="5599000" />
+      <workItem from="1673506805255" duration="10981000" />
+      <workItem from="1673563531876" duration="1336000" />
+      <workItem from="1673564888900" duration="1677000" />
+      <workItem from="1673584497121" duration="1015000" />
+      <workItem from="1673585535439" duration="29000" />
+      <workItem from="1673585724315" duration="449000" />
+      <workItem from="1673586190096" duration="1509000" />
+      <workItem from="1673746980001" duration="11828000" />
+      <workItem from="1673760319051" duration="25000" />
+      <workItem from="1673760625273" duration="2011000" />
+      <workItem from="1673778963476" duration="149000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
