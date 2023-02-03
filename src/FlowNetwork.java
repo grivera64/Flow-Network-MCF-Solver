@@ -95,7 +95,7 @@ public class FlowNetwork {
 
     public boolean isArcExhausted(int dnId, int snId) {
         return this.getArc(dnId, snId)
-                .isExhausted() || this.getStorageNode(snId).isFull();
+                .isExhausted() || this.getStorageNode(snId).isFull() || this.getDataNode(dnId).isEmpty();
     }
 
     public List<Integer> getConnectedNodes(int dnId) {

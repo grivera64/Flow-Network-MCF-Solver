@@ -1,12 +1,11 @@
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 
-public class GreedyModel implements Model {
+public class NodeOrderedGreedyModel implements Model {
     private final FlowNetwork fn;
     private boolean done = false;
 
-    public GreedyModel(String fileName) throws IOException {
+    public NodeOrderedGreedyModel(String fileName) throws IOException {
         this.fn = new FlowNetwork(fileName);
     }
 
