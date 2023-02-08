@@ -109,9 +109,14 @@ public class FlowNetwork {
         StorageNode sn = this.getStorageNode(snId);
         Arc arc = this.getArc(dnId, snId);
 
-        if (dn.isEmpty() || sn.isFull()) {
-            throw new IllegalArgumentException(String.format("Cannot send flow from nodes %d to %d!", dnId, snId));
+        if (dn.isEmpty()) {
+            throw new IllegalArgumentException(String.format("Data node %d is empty!", dnId));
         }
+
+        if (sn.isFull()) {
+            throw new IllegalArgumentException(String.format("Storage node %d is full!", snId));
+        }
+
         dn.removePackets(1);
         sn.addPackets(1);
         arc.addFlow(1);
@@ -160,4 +165,13 @@ public class FlowNetwork {
         }
         return cost;
     }
+
+//    public String getArcDebug(int dnId, int snId) {
+//        Arc arc = this.getArc(dnId, snId);
+//        DataNode dn = this.getDataNode(dnId);
+//        StorageNode sn = this.getStorageNode(snId);
+//        return String.format("Arc exhausted: %b\nDN %d empty: %b\nSN %d full: %b\n",
+//                arc.isExhausted(), dnId, dn.isEmpty(), snId, sn.isFull()
+//        );
+//    }
 }

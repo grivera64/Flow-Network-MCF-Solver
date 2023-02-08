@@ -12,7 +12,6 @@ public class CostOrderedGreedyModel implements Model {
 
     @Override
     public void run() {
-        List<Integer> options;
         int[] ids;
         while (this.fn.hasOverflowPackets()) {
             ids = this.getMinCostId();
