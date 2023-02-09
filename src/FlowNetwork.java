@@ -93,6 +93,10 @@ public class FlowNetwork {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * @Deprecated As arc exhaustion is not possible within a flow network outside of the CS2.exe program
+     */
+    @Deprecated
     public boolean isArcExhausted(int dnId, int snId) {
         return this.getArc(dnId, snId)
                 .isExhausted() || !this.canAddFlowTo(dnId, snId);
@@ -111,7 +115,7 @@ public class FlowNetwork {
     public void addFlowTo(int dnId, int snId) {
         DataNode dn = this.getDataNode(dnId);
         StorageNode sn = this.getStorageNode(snId);
-//        Arc arc = this.getArc(dnId, snId);
+        Arc arc = this.getArc(dnId, snId);
 
         if (dn.isEmpty()) {
             throw new IllegalArgumentException(String.format("Data node %d is empty!", dnId));
@@ -123,7 +127,7 @@ public class FlowNetwork {
 
         dn.removePackets(1);
         sn.addPackets(1);
-//        arc.addFlow(1);
+        arc.addFlow(1);
     }
 
     private List<Arc> getArcsFrom(int fromId) {

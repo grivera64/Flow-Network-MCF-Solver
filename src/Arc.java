@@ -46,12 +46,14 @@ public class Arc implements Comparable<Arc> {
     public void addFlow(int count) {
         int newFlow = this.flow + count;
 
+        // For non-CS2.exe files, this isn't required to check!
+        /*
         if (newFlow > this.maxFlow) {
             throw new IllegalArgumentException("Cannot overflow arc!");
         } else if (newFlow < this.minFlow) {
             throw new IllegalArgumentException("Cannot underflow arc!");
         }
-
+        */
         this.flow = newFlow;
     }
 
