@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 
 public class RandomModel implements Model {
@@ -13,14 +12,15 @@ public class RandomModel implements Model {
     @Override
     public void run() {
         List<Integer> options;
+        int optionIndex = -1;
         while (this.fn.hasOverflowPackets()) {
             for (int dnId : this.fn.getDataNodeIds()) {
                 options = this.fn.getConnectedNodes(dnId);
-                Collections.shuffle(options);
-                while (this.fn.isArcExhausted(dnId, options.get(0))) {
-                    Collections.shuffle(options);
-                }
-                this.fn.addFlowTo(dnId, options.get(0));
+
+                do {
+                    optionIndex = (int) (Math.random() * options.size());
+                } while (!this.fn.canAddFlowTo(dnId, options.get(optionIndex)));
+                this.fn.addFlowTo(dnId, options.get(optionIndex));
             }
         }
         this.done = true;

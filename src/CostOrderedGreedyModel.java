@@ -15,7 +15,7 @@ public class CostOrderedGreedyModel implements Model {
         int[] ids;
         while (this.fn.hasOverflowPackets()) {
             ids = this.getMinCostId();
-            while (!this.fn.isArcExhausted(ids[0], ids[1])) {
+            while (this.fn.canAddFlowTo(ids[0], ids[1])) {
                 this.fn.addFlowTo(ids[0], ids[1]);
             }
         }
@@ -37,7 +37,7 @@ public class CostOrderedGreedyModel implements Model {
             /* Find the candidates that this node can send flow to */
             options = this.fn.getConnectedNodes(dnId)
                     .stream()
-                    .filter(i -> !this.fn.isArcExhausted(dnId, i))
+                    .filter(i -> this.fn.canAddFlowTo(dnId, i))
                     .collect(Collectors.toList());
 
             if (options.isEmpty()) {

@@ -95,7 +95,11 @@ public class FlowNetwork {
 
     public boolean isArcExhausted(int dnId, int snId) {
         return this.getArc(dnId, snId)
-                .isExhausted() || this.getStorageNode(snId).isFull() || this.getDataNode(dnId).isEmpty();
+                .isExhausted() || !this.canAddFlowTo(dnId, snId);
+    }
+
+    public boolean canAddFlowTo(int dnId, int snId) {
+        return this.getStorageNode(snId).hasSpace() && this.getDataNode(dnId).hasOverflowPackets();
     }
 
     public List<Integer> getConnectedNodes(int dnId) {
@@ -107,7 +111,7 @@ public class FlowNetwork {
     public void addFlowTo(int dnId, int snId) {
         DataNode dn = this.getDataNode(dnId);
         StorageNode sn = this.getStorageNode(snId);
-        Arc arc = this.getArc(dnId, snId);
+//        Arc arc = this.getArc(dnId, snId);
 
         if (dn.isEmpty()) {
             throw new IllegalArgumentException(String.format("Data node %d is empty!", dnId));
@@ -119,7 +123,7 @@ public class FlowNetwork {
 
         dn.removePackets(1);
         sn.addPackets(1);
-        arc.addFlow(1);
+//        arc.addFlow(1);
     }
 
     private List<Arc> getArcsFrom(int fromId) {

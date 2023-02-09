@@ -22,7 +22,7 @@ public class NodeOrderedGreedyModel implements Model {
                 minCost = Integer.MAX_VALUE;
                 for (int option : options) {
                     currCost = this.fn.getArcCostPerPacket(dnId, option);
-                    if (currCost < minCost && !this.fn.isArcExhausted(dnId, option)) {
+                    if (currCost < minCost && this.fn.canAddFlowTo(dnId, option)) {
                         minCost = currCost;
                         minId = option;
                     }

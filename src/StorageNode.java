@@ -16,6 +16,10 @@ public class StorageNode extends SensorNode {
         return this.usedSpace >= this.capacity;
     }
 
+    public boolean hasSpace() {
+        return this.usedSpace < this.capacity;
+    }
+
     public void addPackets(int count) {
         if (count <= 0) {
             throw new IllegalArgumentException("Cannot add non-positive counts of packets");
