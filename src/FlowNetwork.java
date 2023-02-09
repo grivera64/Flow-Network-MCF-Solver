@@ -63,7 +63,7 @@ public class FlowNetwork {
 
     public boolean hasOverflowPackets() {
         for (DataNode dn : this.getDataNodes()) {
-            if (!dn.isEmpty()) {
+            if (dn.hasOverflowPackets()) {
                 return true;
             }
         }
